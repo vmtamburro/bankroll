@@ -1,0 +1,12 @@
+.features{
+    margin:30px;
+}
+
+li{
+    margin:10px;
+    font-size: 30px;
+}
+
+.nav-link{
+     cursor: pointer;
+}
