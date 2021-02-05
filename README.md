@@ -1,4 +1,4 @@
-# Bankroll App
+# Bankroll App (Rowan Hackathon Spring 2021)
 *A financial management system for personal and business use.*
 
 ## Features
