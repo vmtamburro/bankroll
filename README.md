@@ -12,7 +12,7 @@
 - Users can create contact lists, for which they can pre-allocate their funds to specific contacts on recurring schedules. 
 
 
-**Analytics (d3.js)**
+**Analytics **
 - Financial Health Data
 - Profitablility
 - Accounting
