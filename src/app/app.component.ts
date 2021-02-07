@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AllocationComponent } from './allocation/allocation.component'
+import { AnalyticsComponent } from './analytics/analytics.component'
+import { HomeComponent } from './home/home.component'
 import * as fa from '@fortawesome/free-solid-svg-icons'
 
 @Component({

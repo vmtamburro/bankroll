@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  </head>
 <body>
   <div class="pos-f-t sticky-top">
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="bg-dark p-4">
         <div class="row">
           <div class="col d-flex justify-content-center">
-            <a class="nav-link" onclick="alert('hello world');">
+            <a class="nav-link" routerLink="/payroll">
               <h5 class="text-white">Payroll Contacts <fa-icon [icon]="faWallet"></fa-icon>
               </h5>
             </a>
           </div>
           <div class="col d-flex justify-content-center">
-            <a class="nav-link">
+            <a class="nav-link" routerLink="/analytics" >
               <h4 class="text-white">Analytics <fa-icon [icon]="faBalance"></fa-icon>
               </h4>
             </a>
           </div>
           <div class="col d-flex justify-content-center">
-            <a class="nav-link">
+            <a class="nav-link" routerLink="/allocation">
               <h4 class="text-white">Allocation <fa-icon [icon]="faHandUSD"></fa-icon>
               </h4>
             </a>
           </div>
           <div class="col d-flex justify-content-center">
-            <a class="nav-link">
+            <a class="nav-link" routerLink="/counseling">
               <h4 class="text-white">Counseling <fa-icon [icon]="faCommentsDollar"></fa-icon>
               </h4>
             </a>
@@ -38,57 +40,12 @@
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <h1 class="text-white"><fa-icon [icon]="faPiggy"></fa-icon> bankroll</h1>
+      <a routerLink="/home"><h1 class="text-white"><fa-icon [icon]="faPiggy"></fa-icon> bankroll</h1></a>
+      
     </nav>
   </div>
-  <div class="features">
-    <div class="contianer d-flex justify-content-center">
-      <div class="row">
-        <ul class="list-unstyled">
-          <h5 class="display-3">Spending Allocation</h5>
-          <li>Schedule finances and automatically make payments with integration.</li>
-          <li>Create, categorize, and tag payments</li>
-          <li>Customize Payment Intervals</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="features">
-    <div class="contianer d-flex justify-content-center">
-      <div class="row">
-        <ul class="list-unstyled">
-          <h5 class="display-3">Contact Payroll</h5>
-          <li>Schedule finances and automatically make payments with integration.</li>
-          <li>Create, categorize, and tag payments</li>
-          <li>Customize Payment Intervals</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="features">
-    <div class="contianer d-flex justify-content-center">
-      <div class="row">
-        <ul class="list-unstyled">
-          <h5 class="display-3">Analytics</h5>
-          <li>Schedule finances and automatically make payments with integration.</li>
-          <li>Create, categorize, and tag payments</li>
-          <li>Customize Payment Intervals</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="features">
-    <div class="contianer d-flex justify-content-center">
-      <div class="row">
-        <ul class="list-unstyled">
-          <h5 class="display-3">Counseling</h5>
-          <li>Schedule finances and automatically make payments with integration.</li>
-          <li>Create, categorize, and tag payments</li>
-          <li>Customize Payment Intervals</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+
+  <router-outlet></router-outlet>
   
 
 </body>
