@@ -6,10 +6,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { AllocationComponent } from './allocation/allocation.component';
 
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { CounselingComponent } from './counseling/counseling.component';
+
+import { UserService } from './user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: 'analytics', component: AnalyticsComponent },
@@ -17,7 +20,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'counseling', component: CounselingComponent },
   { path: 'payroll', component: PayrollComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -29,13 +32,8 @@ const routes: Routes = [
     PayrollComponent,
     CounselingComponent,
   ],
-  imports: [
-    BrowserModule,
-    FontAwesomeModule,
-    RouterModule.forRoot(routes)
-  ],
-  providers: [],
+  imports: [BrowserModule, FontAwesomeModule, RouterModule.forRoot(routes), HttpClientModule],
+  providers: [UserService],
   bootstrap: [AppComponent],
-  
 })
-export class AppModule { }
+export class AppModule {}
