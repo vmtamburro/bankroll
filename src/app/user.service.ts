@@ -7,10 +7,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class UserService {
   private headers: HttpHeaders;
   private accessPointUrl: string = 'https://localhost:44394/api/users';
+
   constructor(private http: HttpClient) {
-    this.headers = new HttpHeaders({
-      'Content-Type': 'application/json; charset=utf-8',
-    });
+    this.headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
   }
 
   public get() {

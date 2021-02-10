@@ -13,6 +13,8 @@ import { CounselingComponent } from './counseling/counseling.component';
 
 import { UserService } from './user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { DatePipe } from '@angular/common';
 
 const routes: Routes = [
   { path: 'analytics', component: AnalyticsComponent },
@@ -20,6 +22,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'counseling', component: CounselingComponent },
   { path: 'payroll', component: PayrollComponent },
+  { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
@@ -31,8 +34,14 @@ const routes: Routes = [
     HomeComponent,
     PayrollComponent,
     CounselingComponent,
+    LoginComponent,
   ],
-  imports: [BrowserModule, FontAwesomeModule, RouterModule.forRoot(routes), HttpClientModule],
+  imports: [
+    BrowserModule,
+    FontAwesomeModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+  ],
   providers: [UserService],
   bootstrap: [AppComponent],
 })
