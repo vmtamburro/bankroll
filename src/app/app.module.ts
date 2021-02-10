@@ -10,11 +10,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { CounselingComponent } from './counseling/counseling.component';
-
+import { FormsModule} from '@angular/forms'
 import { UserService } from './user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { DatePipe } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
+
 
 const routes: Routes = [
   { path: 'analytics', component: AnalyticsComponent },
@@ -41,6 +43,7 @@ const routes: Routes = [
     FontAwesomeModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
+    FormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent],
