@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Welcome Back</h2>
+            </div>
+            <br/>
+            <form>
+                <div class="form-group col-6">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}"   id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group col-6">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}"   id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group col-6">
+                    <button type="submit" class="btn btn-primary" (click)="Login($event);">Submit</button>
+                </div>
+              </form>
+        </div>
+    </body>
+</html>

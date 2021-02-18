@@ -6,10 +6,17 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { AllocationComponent } from './allocation/allocation.component';
 
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PayrollComponent } from './payroll/payroll.component';
 import { CounselingComponent } from './counseling/counseling.component';
+import { FormsModule} from '@angular/forms'
+import { UserService } from './user.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { DatePipe } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
+
 
 const routes: Routes = [
   { path: 'analytics', component: AnalyticsComponent },
@@ -17,7 +24,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'counseling', component: CounselingComponent },
   { path: 'payroll', component: PayrollComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -28,14 +36,16 @@ const routes: Routes = [
     HomeComponent,
     PayrollComponent,
     CounselingComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent],
-  
 })
-export class AppModule { }
+export class AppModule {}
